@@ -22,5 +22,18 @@
  * @returns {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // Your code here
+  
+  var generic_color = color.toLowerCase();
+
+  if(generic_color === 'green'){
+    return "GO";
+  }else if(generic_color === 'yellow'){
+    return "SLOW DOWN";
+  }else if(generic_color === 'red'){
+    return "STOP";
+  }else if(generic_color === 'flashing red'){
+    return "STOP AND PROCEED WITH CAUTION";
+  }else{
+    return "INVALID SIGNAL";
+  }
 }
